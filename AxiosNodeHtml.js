@@ -44,7 +44,7 @@ app.get("/create", (req, res) => {
 
 app.post("/create", async (req, res) => {
   try {
-    const data = {title: req.body.title, author: req.body.author};
+    const data = { title: req.body.title, author: req.body.author};
     await axios.post(base_url + '/books', data);
     res.redirect("/");
   } catch (err) {
